@@ -4,20 +4,15 @@ import json
 from datetime import datetime
 import s3fs 
 
-def run_twitter_etl():
+def run_twitter_etls():
     access_key= "NQvlxdVwW2W2HnG1GZ3SwkKiK"
     access_secret="kO7UJMtyttmcDqK0uKPTwusvKL3bZMr1UrUoP4GLNyzyufXlQf"
     consumer_key="1758068822521860096-krTp9FISlkZfFBcqlcSthzfPIqHoWH"
     consumer_secret="6Wg418gGUOWOILKSvxJCf64ePEbGdDujWk85N0NocZtSv"
 
-
     # Twitter authentication
     auth = tweepy.OAuthHandler(access_key, access_secret)   
     auth.set_access_token(consumer_key, consumer_secret) 
-
-
-
-
 
      # # # Creating an API object 
     api = tweepy.API(auth)
